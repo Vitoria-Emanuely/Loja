@@ -18,15 +18,17 @@ if ($_GET['acao'] == 'cadastrar'){
 
 if ($_GET['acao'] == 'editar'){
 
+    $crud = new CrudProdutos();
+
+    //$nome, $preco, $categoria, $quantidade_estoque, $codigo
+    $produto = new Produto($_POST['nome'], $_POST['preco'], $_POST['categoria'], $_POST['quantidade_estoque'], $_POST['codigo']);
+
     $crud->editar($produto);
 
     header("location: ../views/admin/produtos.php");
 }
 
-//quando um valor da URL for igual a excluir faça isso
 if ($_GET['acao'] == 'excluir'){
-
-    //algoritmo para excluir
 
     $crud = new CrudProdutos();
     $crud->excluir($_GET['codigo']);

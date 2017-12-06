@@ -34,7 +34,7 @@ require_once "cabecalho.php";
             <tbody>
             <?php foreach ($listaProdutos as $produto): ?>
                 <tr>
-                    <th scope="row">mostre o código do produto</th>
+                    <th scope="row"><?= $produto->codigo?></th>
                     <td><?= $produto->nome ?></td>
                     <td><?= $produto->preco ?></td>
                     <td><?= $produto->quantidade_estoque ?></td>
@@ -48,7 +48,7 @@ require_once "cabecalho.php";
         </table>
 
 <?php
-require_once __DIR__."cabecalho.php";
+require_once "rodape.php";
 
 ?>
 
