@@ -45,7 +45,7 @@
     <div class="row">
 
         <div class="col-md-2 px-0 admin-menu" style="position: fixed; top: 50px; bottom: 0; ">
-            <img src="../../../assets/imagens/avatar.gif" alt="" class="img-fluid rounded-circle" style="padding: 15px;">
+            <img src="../../../assets/imagens/avatar.jpeg" alt="" class="img-fluid rounded-circle" style="padding: 15px;">
             <ul>
                 <li><a href="produtos.php">Produtos</a></li>
                 <li><a href="cadastro-produto.php">Cadastrar Produto</a></li>

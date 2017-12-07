@@ -26,8 +26,8 @@ class Produto {
 
     }
 
-    public function estaDisponivel($quantidade_estoque){
-        if ($quantidade_estoque > 0){
+    public function estaDisponivel(){
+        if ($this->quantidade_estoque > 0){
             echo "Disponivel";
         }else{
             echo "Indisponivel";

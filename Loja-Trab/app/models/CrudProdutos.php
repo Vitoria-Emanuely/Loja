@@ -22,7 +22,7 @@ class CrudProdutos
 
     public function salvar(Produto $produto)
     {
-        $sql = "INSERT INTO tb_produtos (nome, preco, categoria, quantidade_estoque, codigo =  NULL ) VALUES ('$produto->nome', $produto->preco, '$produto->categoria','$produto->quantidade_estoque')";
+        $sql = "INSERT INTO tb_produtos (nome, preco, categoria, quantidade_estoque) VALUES ('$produto->nome', $produto->preco, '$produto->categoria','$produto->quantidade_estoque')";
 
         $this->conexao->exec($sql);
     }
@@ -59,30 +59,14 @@ class CrudProdutos
 
     public function editar(Produto $produto) {
 
-
-        $this->conexao->exec("UPDATE tb_produtos
+        $sql = "UPDATE tb_produtos
         SET nome= '$produto->nome', preco = $produto->preco, categoria= '$produto->categoria', quantidade_estoque=$produto->quantidade_estoque
-        WHERE codigo=$produto->codigo");
+        WHERE codigo=$produto->codigo";
+        $this->conexao->exec($sql);
 
     }
 
-    public function buscar($busca = null)
-    {
-        $this->conexao->query("SELECT * FROM tb_produtos WHERE codigo = $codigo");
-        $encontrado = [];
 
-        if ($busca == null || $busca == "") {
-            $encontrado = $this->getProdutos();
-        } else {
-            foreach ($listaProdutos as $produto) {
-                if ($produto['nome'] == $busca) {
-                    $encontrado[] = $produto;
-                }
-            }
-        }
-        return $encontrado;
-
-    }
 
 }
 

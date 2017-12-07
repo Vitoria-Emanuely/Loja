@@ -3,7 +3,7 @@
 <!-- Footer -->
 <div class="row footer">
     <footer class="py-3 bg-dark col-md-12">
-        <p class="m-0 text-center text-white">Instituto Federal Catarinense de Educação, Ciência e Tecnologia</p>
+        <p class="m-0 text-center text-white">Gamer Buy, sua loja especial!</p>
     </footer>
 </div>
 

@@ -9,38 +9,38 @@ require_once "cabecalho.php";
 
 ?>
 
-    <!--Barra de busca-->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="digite o nome do produto" aria-describedby="basic-addon2">
-                <button class="input-group-addon" id="basic-addon2">buscar</button>
-            </div>
+<!--Barra de busca-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Digite o nome do produto" aria-describedby="basic-addon2">
+            <button class="input-group-addon" id="basic-addon2">buscar</button>
         </div>
     </div>
-    <br>
+</div>
+<br>
 
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Título</th>
-                <th>Preço</th>
-                <th>Estoque</th>
-                <th>Categoria</th>
-                <th>Ações</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($listaProdutos as $produto): ?>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+            <?php foreach ($listaProdutos as $pro): ?>
                 <tr>
-                    <th scope="row"><?= $produto->codigo?></th>
-                    <td><?= $produto->nome ?></td>
-                    <td><?= $produto->preco ?></td>
-                    <td><?= $produto->quantidade_estoque ?></td>
-                    <td><?= $produto->categoria ?></td>
-                    <td><a href="editar-produto.php?codigo=<?= $produto->codigo ?>">editar</a> |
-                        <a href="../../controllers/controladorProduto.php?acao=excluir&codigo=<?= $produto->codigo ?>"> remover</a></td>
+                    <th scope="row"><?= $pro->codigo?></th>
+                    <td><?= $pro->nome ?></td>
+                    <td><?= $pro->preco ?></td>
+                    <td><?= $pro->quantidade_estoque ?></td>
+                    <td><?= $pro->categoria ?></td>
+                    <td><a href="editar-produto.php?codigo=<?= $pro->codigo ?>">Editar</a> |
+                        <a href="../../controllers/controladorProduto.php?acao=excluir&codigo=<?= $pro->codigo ?>"> Remover</a></td>
                 </tr>
             <?php endforeach; ?>
 

@@ -14,7 +14,7 @@ require_once "rodape.php";
     </div>
 
     <div class="form-group">
-        <label for="preco">Preco</label>
+        <label for="preco">Preço</label>
         <input name="preco" type="number" step="0.01" class="form-control" id="preco" placeholder="">
     </div>
 
@@ -26,9 +26,10 @@ require_once "rodape.php";
     <div class="form-group">
         <label for="Categoria">Categoria</label>
         <select name="categoria" class="form-control" id="Categoria">
-            <option>Fruta</option>
-            <option>Legume</option>
-            <option>Hortaliça</option>
+            <option>Acessórios</option>
+            <option>Camisetas</option>
+            <option>Canecas</option>
+            <option>Chaveiros</option>
         </select>
     </div>
 

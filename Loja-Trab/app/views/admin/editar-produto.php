@@ -1,9 +1,9 @@
 ﻿<?php
 
     require_once "cabecalho.php";
-    require_once "rodape.php";
 
-    require_once "../../models/CrudProdutos.php";
+    require_once __DIR__."/../../models/CrudProdutos.php";
+    require_once __DIR__."/../../models/Produto.php";
 
     $crud = new CrudProdutos();
 
@@ -15,7 +15,7 @@
 ?>
 
 <h2>Editar Produtos</h2>
-<form action="../../controllers/controladorProduto.php?acao=editar&codigo=<?= $codigo; ?>" method="post">
+<form action="../../controllers/controladorProduto.php?acao=editar&codigo=<?= $produto->codigo; ?>" method="post">
     <div class="form-group">
         <label for="produto">Produto:</label>
         <input value="<?= $produto->nome ?>" name="nome" type="text" class="form-control" id="produto" aria-describedby="nome produto" placeholder="Digite o produto">
@@ -41,8 +41,10 @@
         </select>
     </div>
 
-    <input name="codigo" type="hidden" value="<?= $codigo; ?>">
 
     <button type="submit" class="btn btn-primary">Atualizar Produto</button>
 
 </form>
+
+<?php
+require_once "rodape.php"; ?>

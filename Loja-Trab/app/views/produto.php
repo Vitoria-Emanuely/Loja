@@ -1,6 +1,6 @@
 <?php
 
-    require_once "../models/CrudProdutos.php";
+    require_once __DIR__."/../models/CrudProdutos.php";
 
     $crud = new CrudProdutos();
 
@@ -103,7 +103,8 @@
                         comprar
                     </button>
                 </div>
-            </div><!-- end row -->
+            </div>
+            <!-- end row -->
 
         </div>
 

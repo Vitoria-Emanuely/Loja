@@ -92,7 +92,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Instituto Federal Catarinense de Educação, Ciência e Tecnologia</p>
+        <p class="m-0 text-center text-white">Gamer Buy, sua loja especial!</p>
     </div>
     <!-- /.container -->
 </footer>

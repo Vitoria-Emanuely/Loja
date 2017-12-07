@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Created by PhpStorm.
@@ -5,6 +6,8 @@
  * Date: 09/11/2017
  * Time: 10:40
  */
+header('Content-Type: text/html; charset=utf-8');
+
 
 class Conexao {
 

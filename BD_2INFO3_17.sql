@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 06-Dez-2017 às 11:48
+-- Generation Time: 07-Dez-2017 às 16:41
 -- Versão do servidor: 5.7.17-0ubuntu0.16.04.1
 -- PHP Version: 7.0.13-0ubuntu0.16.04.1
 
@@ -39,18 +39,11 @@ CREATE TABLE `tb_produtos` (
 --
 
 INSERT INTO `tb_produtos` (`codigo`, `nome`, `categoria`, `preco`, `quantidade_estoque`) VALUES
-(3, 'Tangerina', 'Fruta', '100.00', 0),
-(5, 'Manga', 'Fruta', '100.00', 0),
+(1, 'Camiseta Draven', 'Camisetas', '35.00', 300),
+(3, 'Chaveiro Vayne', 'Chaveiros', '10.00', 500),
+(5, 'Colar Fullmetal Alchemist', 'Acessórios', '15.00', 100),
 (6, 'Caneca da hora', 'Canecas', '5.00', 200),
-(7, 'Cebola', 'Hortaliça', '100.00', 0),
-(8, 'Couve', 'Hortaliça', '100.00', 0),
-(9, 'Couve-flor', 'Hortaliça', '101.00', 0),
-(16, 'Abóbora', 'Fruta', '3.25', 0),
-(17, 'Abóbora', 'Fruta', '3.25', 0),
-(18, 'Amendoim', 'Fruta', '1.35', 0),
-(19, 'Repolho', 'Hortaliça', '8.00', 0),
-(20, 'titulo', 'categoria', '0.00', 0),
-(21, 'Laranja', 'Acessórios', '1.00', 1);
+(15, 'Mousepad League of Legends', 'Acessórios', '30.00', 50);
 
 --
 -- Indexes for dumped tables
