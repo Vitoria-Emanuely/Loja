@@ -22,17 +22,17 @@
     </div>
 
     <div class="form-group">
-        <label for="preco">Preco</label>
+        <label for="preco">Preço:</label>
         <input value="<?= $produto->preco ?>" name="preco" type="number" step="0.01" class="form-control" id="preco" placeholder="Digite o preço">
     </div>
 
     <div class="form-group">
-        <label for="quantidade">Quantidade</label>
-        <input value="<?= $produto->quantidade_estoque ?>" name="estoque" type="number" class="form-control" id="quantidade" placeholder="Digite a quantidade">
+        <label for="quantidade">Quantidade:</label>
+        <input value="<?= $produto->quantidade_estoque ?>" name="quantidade" type="number" class="form-control" id="quantidade" placeholder="Digite a quantidade">
     </div>
 
     <div class="form-group">
-        <label for="Categoria">Categoria</label>
+        <label for="Categoria">Categoria:</label>
         <select name="categoria" class="form-control" id="Categoria">
             <option <?php if ($produto->categoria == "Acessórios"){ echo "selected"; } ?> >Acessórios</option>
             <option <?php if ($produto->categoria == "Camisetas"){ echo "selected"; } ?> >Camisetas</option>

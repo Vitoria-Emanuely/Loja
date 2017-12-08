@@ -1,6 +1,7 @@
 <?php
 
     require_once __DIR__."/../models/CrudProdutos.php";
+    require_once __DIR__."/../models/Produto.php";
 
     $crud = new CrudProdutos();
 

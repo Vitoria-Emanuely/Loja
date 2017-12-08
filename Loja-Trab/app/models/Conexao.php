@@ -14,7 +14,7 @@ class Conexao {
     const HOST      = "localhost";
     const NOMEBANCO = "BD_2INFO3_17";
     const USUARIO   = "root";
-    const SENHA     = "root";
+    const SENHA     = "";
     
     //!!!Substitua daqui para baixo
     public static $conexao = null;
@@ -30,7 +30,7 @@ class Conexao {
             
             return self::$conexao;
             
-        }catch(Exception $e){
+        }catch(PDOException $e){
             die("Falhou a conexao ou ocorreu um erro banco: " . $e->getMessage()); 
         }
 

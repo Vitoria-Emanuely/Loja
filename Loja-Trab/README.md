@@ -1,1 +1,2 @@
-# lojaIFC2info1
+# Loja
+Loja funcional

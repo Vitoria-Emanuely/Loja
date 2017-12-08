@@ -57,15 +57,11 @@ class CrudProdutos
 
     }
 
-    public function editar(Produto $produto) {
+    public function editar($codigo,$nome,$preco,$quantidade,$categoria){
 
-        $sql = "UPDATE tb_produtos
-        SET nome= '$produto->nome', preco = $produto->preco, categoria= '$produto->categoria', quantidade_estoque=$produto->quantidade_estoque
-        WHERE codigo=$produto->codigo";
+        $sql = "UPDATE tb_produtos SET nome='$nome', preco=$preco, quantidade_estoque=$quantidade,categoria='$categoria' WHERE codigo =$codigo";
         $this->conexao->exec($sql);
-
     }
-
 
 
 }

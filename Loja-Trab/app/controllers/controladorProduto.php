@@ -9,22 +9,21 @@
 
 if ($_GET['acao'] == 'cadastrar'){
 
-    $produto = new Produto($_POST['nome'], $_POST['preco'], $_POST['categoria'], $_POST['quantidade_estoque']);
+    $produto = new Produto($_POST['nome'], $_POST['preco'], $_POST['categoria'], $_POST['quantidade']);
     $crud = new CrudProdutos();
     $crud->salvar($produto);
 
     header('location: ../views/admin/produtos.php');
 }
 
-if ($_GET['acao'] == 'editar'){
+if ( $_GET['acao'] == 'editar'){
 
+    //algoritmo para editar
     $crud = new CrudProdutos();
+    $crud->editar($_GET['codigo'],$_POST['nome'],$_POST['preco'],$_POST['quantidade'],$_POST['categoria']);
 
-    $produto = new Produto($_POST['nome'], $_POST['preco'], $_POST['categoria'], $_POST['quantidade_estoque']);
-
-    $crud->editar($produto);
-
-    header("location: ../views/admin/produtos.php");
+    //redirecione para a página de produtos
+    header("Location: ../views/admin/produtos.php");
 }
 
 if ($_GET['acao'] == 'excluir'){
@@ -34,13 +33,12 @@ if ($_GET['acao'] == 'excluir'){
 
     header("location: ../views/admin/produtos.php");
 }
-//if ( $_GET['acao'] == 'comprar') {
+//if ( $_GET['acao'] == 'comprar'){
 //    $crud = new CrudProdutos();
 //    $produto = $crud->getProduto($_GET['codigo']);
-//    $produto['quant_estoque'] -= $_POST['quantidade_nova'];
-//    $crud->editar($produto['nome'], $produto['preco'], $produto['quantidade_estoque'], $produto['categoria']);
-//
-//    header("Location: ../views/admin/produtos.php");
+//    $produto['quantidade_estoque'] -= $_POST['quantidade_nova'];
+//    $crud->editar($produto['codigo'],$produto['nome'],$produto['preco'],$produto['quantidade_estoque'],$produto['categoria']);
+//    header("Location: ../../index.php");
 //}
     function buscar($nome)
 {

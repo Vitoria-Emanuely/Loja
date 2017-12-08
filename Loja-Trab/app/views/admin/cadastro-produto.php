@@ -14,13 +14,13 @@ require_once "rodape.php";
     </div>
 
     <div class="form-group">
-        <label for="preco">Preço</label>
+        <label for="preco">Preço:</label>
         <input name="preco" type="number" step="0.01" class="form-control" id="preco" placeholder="">
     </div>
 
     <div class="form-group">
-        <label for="quantidade">Quantidade</label>
-        <input name="quantidade" type="number" class="form-control" id="quantidade" placeholder="">
+        <label for="quantidade_estoque">Quantidade:</label>
+        <input name="quantidade_estoque" type="number" class="form-control" id="quantidade" placeholder="">
     </div>
 
     <div class="form-group">
