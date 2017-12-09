@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 07-Dez-2017 às 16:41
--- Versão do servidor: 5.7.17-0ubuntu0.16.04.1
--- PHP Version: 7.0.13-0ubuntu0.16.04.1
+-- Host: 127.0.0.1
+-- Generation Time: 09-Dez-2017 às 01:16
+-- Versão do servidor: 10.1.25-MariaDB
+-- PHP Version: 7.0.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `BD_2INFO3_17`
+-- Database: `bd_2info3_17`
 --
 
 -- --------------------------------------------------------
@@ -39,11 +41,11 @@ CREATE TABLE `tb_produtos` (
 --
 
 INSERT INTO `tb_produtos` (`codigo`, `nome`, `categoria`, `preco`, `quantidade_estoque`) VALUES
-(1, 'Camiseta Draven', 'Camisetas', '35.00', 300),
-(3, 'Chaveiro Vayne', 'Chaveiros', '10.00', 500),
-(5, 'Colar Fullmetal Alchemist', 'Acessórios', '15.00', 100),
+(1, 'Camiseta Draven', 'Camisetas', '35.00', 290),
+(3, 'Chaveiro Kirito', 'Chaveiros', '10.00', 500),
+(5, 'Colar Fullmetal Alchemist', 'AcessÃ³rios', '15.00', 100),
 (6, 'Caneca da hora', 'Canecas', '5.00', 200),
-(15, 'Mousepad League of Legends', 'Acessórios', '30.00', 50);
+(15, 'Mousepad League of Legends', 'AcessÃ³rios', '30.00', 50);
 
 --
 -- Indexes for dumped tables
@@ -63,7 +65,8 @@ ALTER TABLE `tb_produtos`
 -- AUTO_INCREMENT for table `tb_produtos`
 --
 ALTER TABLE `tb_produtos`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

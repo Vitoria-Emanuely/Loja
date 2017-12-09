@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/imagens/kirito.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
 
@@ -76,7 +77,7 @@
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="app/views/produto.php?codigo=<?= $prod->codigo ?>" class="btn btn-ifc">veja +</a>
+                        <a href="app/views/produto.php?codigo=<?= $prod->codigo ?>" class="btn btn-ifc">Veja mais</a>
                     </div>
                 </div>
             </div>

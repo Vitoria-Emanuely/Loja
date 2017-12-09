@@ -21,8 +21,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/imagens/kirito.ico" type="image/x-icon" />
 
-    <title>Lojão do IFC</title>
+    <title>Gaymer Buy</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,11 +56,15 @@
     </div>
 </nav>
 
-<!-- Page Content -->
-<div class="container product-content">
 
+    <!-- Page Content -->
+    <div class="container product-content" id="prod">
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <?php if (isset($_GET['msg'])): ?>
+            <div class="alert alert-success">
+                <?= $_GET['msg'] ?>
+            </div>
+        <?php endif; ?>
 
     <!-- Page Features -->
     <div class="row">
@@ -97,14 +102,31 @@
             </div>
             <!-- end row -->
 
-            <div class="row add-to-cart">
-                <div class="col-md-5 product-qty">
-                    <input class="btn btn-default btn-lg btn-qty" value="1" />
-                    <button class="btn btn-lg btn-brand btn-full-width">
-                        comprar
-                    </button>
+            <div class="row">
+                <div class="col-md-12 bottom-rule">
+                    <h2 class="product-price"><?= $produto->quantidade_estoque ?></h2>
                 </div>
             </div>
+            <!-- end row -->
+
+            <form action="../controllers/controladorProduto.php?acao=comprar" method="post">
+
+                <div class="row add-to-cart">
+                    <div class="col-md-5 product-qty">
+                        <input name="quantidade" class="btn btn-default btn-lg btn-qty" value="1" />
+                        <input name="codigo" type="hidden" value="<?= $produto->codigo ?>">
+
+                        <?php if ($produto->quantidade_estoque > 0) { ?>
+
+                            <button class="btn btn-lg btn-brand btn-full-width">Comprar</button>
+
+                        <?php }else{ ?>
+                            <button class="btn btn-lg btn-brand btn-full-width disabled">Comprar</button>
+
+                        <?php } ?>
+
+                    </div>
+                </div>
             <!-- end row -->
 
         </div>

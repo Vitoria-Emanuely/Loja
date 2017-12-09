@@ -33,29 +33,19 @@ if ($_GET['acao'] == 'excluir'){
 
     header("location: ../views/admin/produtos.php");
 }
-//if ( $_GET['acao'] == 'comprar'){
-//    $crud = new CrudProdutos();
-//    $produto = $crud->getProduto($_GET['codigo']);
-//    $produto['quantidade_estoque'] -= $_POST['quantidade_nova'];
-//    $crud->editar($produto['codigo'],$produto['nome'],$produto['preco'],$produto['quantidade_estoque'],$produto['categoria']);
-//    header("Location: ../../index.php");
-//}
-    function buscar($nome)
-{
+if($_GET['acao'] == 'comprar'){
 
     $crud = new CrudProdutos();
-    $produtos = $crud->getProdutos();
-    $encontrados = [];
-    if ($nome == null) {
-        return $produtos;
-    } else {
+    $msg = $crud->comprar($_POST['codigo'], $_POST['quantidade']);
 
-        foreach ($produtos as $produto) {
-            if ($nome == $produto['nome']) {
-                $encontrados[] = $produto;
-            }
-        }
+    header("location: ../views/produto.php?codigo=$_POST[codigo]&msg=$msg");
+}
 
-        return $encontrados;
-    }
+if($_GET['acao'] == 'buscar') {
+
+    $crud = new CrudProdutos();
+    $crud->buscar( $_POST['nome']);
+
+    header("location ../views/produto.php?$_POST[codigo]&nome=$nome");
+
 }

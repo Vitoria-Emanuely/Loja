@@ -1,10 +1,11 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: JEFFERSON
- * Date: 16/11/2017
- * Time: 10:56
+ * User: Supreme
+ * Date: 08/12/2017
+ * Time: 22:00
  */
+
 
 require_once "Conexao.php";
 require_once "Produto.php";
@@ -63,6 +64,36 @@ class CrudProdutos
         $this->conexao->exec($sql);
     }
 
+    public function comprar(int $codigo, int $qntdDesejada){
+        $p = $this->conexao->query("SELECT quantidade_estoque FROM tb_produtos WHERE codigo = $codigo")->fetch(PDO::FETCH_ASSOC);
+        if ($qntdDesejada > $p['quantidade']){
+            return "A quantidade desejada é maior que a disponível";
+        }
+        $novaQuantidade = $p['quantidade_estoque'] - $qntdDesejada;
+        $this->conexao->exec("UPDATE tb_produtos SET quantidade_estoque = $novaQuantidade WHERE codigo = $codigo");
+        return "Compra realizada com sucesso";
+    }
+
+    public function buscar($nome){
+
+        $sql = "SELECT * FROM tb_produtos WHERE codigo=$codigo, nome='$nome'";
+        $this->conexao->exec($sql);
+
+        $produtos = $crud->getProdutos();
+        $encontrados = [];
+        if ($nome == null) {
+            return $produtos;
+        } else {
+
+            foreach ($produtos as $produto) {
+                if ($nome == $produto['pesquisar']) {
+                    $encontrados[] = $produto;
+                }
+            }
+
+            return $encontrados;
+        }
+    }
 
 }
 
